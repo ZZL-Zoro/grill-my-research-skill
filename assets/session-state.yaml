@@ -1,0 +1,35 @@
+# Optional reusable snapshot, not an automatically persisted memory.
+# Nulls and empty lists intentionally represent missing input. Do not invent values.
+schema_version: 1
+project:
+  title: null
+  research_type: null
+  original_question: null
+  current_question: null
+  user_confirmed_goal: null
+  constraints: []
+interaction:
+  mode: "interactive"
+  main_questions_asked: 0
+  checkpoint_budget: 6
+  current_node: null
+  next_question: null
+  next_question_reason: null
+claims: []
+# Claim entries: id, statement, source_status, locator, support, opposition,
+# boundary, verdict. Source statuses are defined in references/session-state.md.
+nodes: []
+# Node entries: id, question, real_user_answer_summary, status, decision_reason.
+# status: open / resolved / deferred / reopened. Keep simulated answers separate.
+critical_unknowns: []
+# Each unknown records its dependent claim, decision impact and information route.
+changes: []
+# Each change records what changed, why, and whether the user confirmed it.
+outcome:
+  status: "OPEN"
+  bounded_conclusion: null
+  evidence_scope: null
+  weakest_link: null
+  recommended_action: null
+  stop_or_pivot_conditions: []
+  next_action: null
